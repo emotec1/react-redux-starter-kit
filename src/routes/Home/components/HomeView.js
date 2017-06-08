@@ -1,6 +1,7 @@
-import React from 'react'
-import DuckImage from '../assets/Duck.jpg'
-import './HomeView.scss'
+import React from "react";
+import DuckImage from "../assets/Duck.jpg";
+import "./HomeView.scss";
+import Infobox from "./Infobox";
 
 export default class HomeView extends React.Component {
   constructor(props) {
@@ -41,6 +42,7 @@ export default class HomeView extends React.Component {
         <span>Progress is {this.state.progress}</span>
         <img alt='This is a duck, because Redux!' className='duck' src={DuckImage}/>
         <button onClick={this.incrementCounter}>Increment</button>
+        <Infobox progress={this.state.progress}/>
       </div>
     )
   }
